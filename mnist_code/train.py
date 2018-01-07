@@ -1,4 +1,5 @@
 #traning Sample
+#traning Sample
 '''
 ns a simple convnet on the MNIST dataset.
 Gets to 99.25% test accuracy after 12 epochs
