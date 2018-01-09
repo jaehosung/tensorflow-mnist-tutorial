@@ -54,7 +54,6 @@ def predict():
 	imgData = request.get_data()
 	#encode it into a suitable format
 	convertImage(imgData)
-	print "debug"
 	#read the image into memory
 	x = imread('output.png',mode='L')
 	#compute a bit-wise inversion so black becomes white and vice versa
@@ -64,14 +63,12 @@ def predict():
 	#imshow(x)
 	#convert to a 4D tensor to feed into our model
 	x = x.reshape(1,28,28,1)
-	print "debug2"
 	#in our computation graph
 	with graph.as_default():
 		#perform the prediction
 		out = model.predict(x)
 		print(out)
 		print(np.argmax(out,axis=1))
-		print "debug3"
 		#convert the response to a string
 		response = np.array_str(np.argmax(out,axis=1))
 		return response	
