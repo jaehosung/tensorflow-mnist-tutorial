@@ -17,27 +17,28 @@
 
   		<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
-	    <script src="{% static index.js' %}"></script>
+	    <script src="{% static 'index.js' %}"></script>
 	    <script type="text/javascript">
               canvas = document.getElementById("canvas");
               ctx = canvas.getContext("2d");
               ctx.lineWidth=30;
-        </script>
+      </script>
 	    <script type="text/javascript">
 
-	   		$(".myButton").click(function(){
-	   			var $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
-	   			var canvasObj = document.getElementById("canvas");
-	   			var img = canvasObj.toDataURL();
-	   			$.ajax({
-	   				type: "POST",
-	   				url: $SCRIPT_ROOT + "/predict/",
-	   				data: img,
-	   				success: function(data){
-	   					$('#result').text(data);
-	   				}
-	   			});
-	   		});
+      $(".myButton").click(function(){
+
+      	var canvasObj = document.getElementById("canvas");
+      	var img = canvasObj.toDataURL();
+        img = encodeURIComponent(img)
+        $.ajax({
+      		type: "POST",
+      		url: '/blog/',
+      		data: img,
+      		success: function(data){
+      			$('#result').text(data);
+      		}
+      	});
+      });
 
 	   </script>
 </body>
