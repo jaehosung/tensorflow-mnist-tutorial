@@ -8,9 +8,8 @@
 </head>
 
 <body>
-
-		<canvas id="canvas" width="560" height="560" style=" float: left;   border-radius: 5px; cursor: crosshair; lineWidth: 10px"></canvas>
-
+  <div> {{ data }}</div>
+		<canvas id="canvas" width="280" height="280" style="border:8px solid; float: left; border-radius: 5px; cursor: crosshair;"></canvas>
 			<input type="button" class ="myButton" value = "predict"/>
 			<input type="button" id="clearButton" value="Clear">
 			<h1 id="result" style="margin-right:0px; margin-top:0px;float:left;"><span> </span></h1>
@@ -21,7 +20,7 @@
 	    <script type="text/javascript">
               canvas = document.getElementById("canvas");
               ctx = canvas.getContext("2d");
-              ctx.lineWidth=30;
+              ctx.lineWidth=3;
       </script>
 	    <script type="text/javascript">
 
@@ -32,7 +31,7 @@
         img = encodeURIComponent(img)
         $.ajax({
       		type: "POST",
-      		url: '/blog/',
+      		url: '/blog/test/',
       		data: img,
       		success: function(data){
       			$('#result').text(data);
