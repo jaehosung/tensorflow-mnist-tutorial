@@ -7,13 +7,13 @@
 </head>
 
 <body>
- 
+
 		<canvas id="canvas" width="560" height="560" style=" float: left;   border-radius: 5px; cursor: crosshair; lineWidth: 10px"></canvas>
-        
+
 			<input type="button" class ="myButton" value = "predict"/>
 			<input type="button" id="clearButton" value="Clear">
 			<h1 id="result" style="margin-right:0px; margin-top:0px;float:left;"><span> </span></h1>
-		
+
   		<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
 	    <script src="{{ url_for('static',filename='index.js') }}"></script>
@@ -23,7 +23,7 @@
               ctx.lineWidth=30;
         </script>
 	    <script type="text/javascript">
-	   
+
 	   		$(".myButton").click(function(){
 	   			var $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
 	   			var canvasObj = document.getElementById("canvas");
@@ -37,7 +37,7 @@
 	   				}
 	   			});
 	   		});
-	   
+
 	   </script>
 </body>
 </html>

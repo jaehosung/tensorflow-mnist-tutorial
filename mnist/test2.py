@@ -3,20 +3,25 @@ from numpy import *
 import tensorflow as tf
 import sys
 
-im=Image.open('MNIST_test_image.JPG')
+
+im=Image.open('4.jpg')
+
 img = array(im.resize((28, 28), Image.ANTIALIAS).convert("L"))
+
 data = img.reshape([1, 784])
+data = 1 - (data/255)
+
+
 
 # Lab 11 MNIST and Deep learning CNN
 import tensorflow as tf
 import random
 # import matplotlib.pyplot as plt
 
-from tensorflow.examples.tutorials.mnist import input_data
 
 tf.set_random_seed(777)  # reproducibility
 
-mnist = input_data.read_data_sets("MNIST_data/", one_hot=True)
+# mnist = input_data.read_data_sets("MNIST_data/", one_hot=True)
 # Check out https://www.tensorflow.org/get_started/mnist/beginners for
 # more information about the mnist dataset
 
