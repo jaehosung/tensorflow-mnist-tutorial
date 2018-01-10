@@ -2,8 +2,8 @@
 {
 	var canvas = document.querySelector( "#canvas" );
 	var context = canvas.getContext( "2d" );
-	canvas.width = 280;
-	canvas.height = 280;
+	canvas.width = 560;
+	canvas.height = 560;
 
 	var Mouse = { x: 0, y: 0 };
 	var lastMouse = { x: 0, y: 0 };
@@ -58,7 +58,7 @@
 		clearButton.on( "click", function()
 		{
 
-				context.clearRect( 0, 0, 280, 280 );
+				context.clearRect( 0, 0, 560, 560 );
 				context.fillStyle="white";
 				context.fillRect(0,0,canvas.width,canvas.height);
 

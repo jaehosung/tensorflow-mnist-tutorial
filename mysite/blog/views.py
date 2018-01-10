@@ -10,7 +10,7 @@ from .models import Post
 from django.shortcuts import render_to_response
 from django.shortcuts import render_to_response
 from django.template import RequestContext
-
+from .models import TestData
 import json
 
 
@@ -257,6 +257,5 @@ def data_return(request):
             prediction = sess.run(
             tf.argmax(logits, 1), feed_dict={X: data, keep_prob: 1})
             temp = prediction
-        print(temp)
     # return render(request, 'blog/post_list.html', {})
-    return render(request,'blog/post_list.html',{'data': temp})
+    return render(request,'blog/test.html',{'tests' : temp})
