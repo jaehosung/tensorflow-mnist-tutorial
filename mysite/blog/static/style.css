@@ -2,6 +2,7 @@
 
 * { margin: 0; padding: 0; }
 
+
 html
 {
 	background-image: -webkit-radial-gradient(top center, circle cover, #E7E7E8 30%, #C6C6C6);
@@ -20,22 +21,29 @@ html
 
 
 }
-
+/*
+#num{
+		width: 560px;
+		height: 560px;
+}*/
 h1
 {
-	top: 20px;
-	left: 0;
-	right: 0;
+
 	text-align: center;
-	font-family: 'Open Sans', Helvetica;
-	color: #807F7D;
-	font-size: 25px;
+	font-family:  Helvetica;
+	color: #000000;
+	font-size: 400px;
 	font-weight: 300;
 	z-index: -1;
-    text-color: white
+	font-style: "Bold"
 }
 
-h1 span { color: #4DAF7C; font-weight: 400; }
+
+p
+{
+	font-size: 30px;
+}
+
 
 /* Debug */
 

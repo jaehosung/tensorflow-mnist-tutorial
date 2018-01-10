@@ -1,6 +1,8 @@
 (function()
 {
 	var canvas = document.querySelector( "#canvas" );
+	var canvasObj = document.getElementById("canvas");
+
 	var context = canvas.getContext( "2d" );
 	canvas.width = 560;
 	canvas.height = 560;
@@ -11,6 +13,7 @@
 	context.fillRect(0,0,canvas.width,canvas.height);
 	context.color = "black";
     context.lineJoin = context.lineCap = 'round';
+	// var flag = 0;
 
 	debug();
 
@@ -21,7 +24,7 @@
 
 		Mouse.x = e.pageX - this.offsetLeft;
 		Mouse.y = e.pageY - this.offsetTop;
-
+		flag = 1;
 	}, false );
 
 	canvas.addEventListener( "mousedown", function( e )
@@ -30,8 +33,31 @@
 
 	}, false );
 
+	canvas.addEventListener( "contextmenu", function( e )
+	{
+		context.clearRect( 0, 0, 560, 560 );
+		context.fillStyle="white";
+		context.fillRect(0,0,canvas.width,canvas.height);
+		flag = 0;
+		window.event.returnValue = false;
+		$('#result').replaceWith('<div id = "result"> <p>There is a 00% chance that it is 0 </p> <p></p> <p></p><p></p><p>| ---------------------------------------------------------------100%</p><p>| 0 : </p><p>| 1 : </p><p>| 2 : </p><p>| 3 : </p><p>| 4 : </p><p>| 5 : </p><p>| 6 : </p><p>| 7 : </p><p>| 8 : </p><p>| 9 : </p><p>| ---------------------------------------------------------------100%</p></div>');
+
+	},false );
+
 	canvas.addEventListener( "mouseup", function()
 	{
+		if(flag !=0){
+			var img = canvasObj.toDataURL();
+			img = encodeURIComponent(img)
+			$.ajax({
+				type: "POST",
+				url: '/test/',
+				data: img,
+				success: function(data){
+					$('#result').replaceWith('<div id = "result">' + data+ '</div>');
+				}
+			});
+		}
 		canvas.removeEventListener( "mousemove", onPaint, false );
 
 	}, false );
