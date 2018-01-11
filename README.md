@@ -3,6 +3,8 @@ MNIST classification in Tensorflow using Django
 
 [![IMAGE ALT TEXT HERE](https://i.ytimg.com/vi/oaSu3NjladU/hqdefault.jpg?sqp=-oaymwEXCPYBEIoBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLB_wSe9eaVWGgnUXM-Sy3AS0rjk1g)](https://www.youtube.com/watch?v=oaSu3NjladU)
 
+https://www.youtube.com/watch?v=oaSu3NjladU
+
 
 ## Requirements
 - Python 3
