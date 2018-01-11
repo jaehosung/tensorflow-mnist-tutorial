@@ -116,18 +116,3 @@ with tf.Session() as sess:
     prediction = sess.run(
         tf.argmax(logits, 1), feed_dict={X: data, keep_prob: 1})
     print(prediction);
-
-# saver = tf.train.Saver()
-# sess = tf.Session()
-# sess.run(tf.global_variables_initializer())
-# print("Prediction: ", sess.run(
-#     tf.argmax(logits, 1.0), feed_dict={X: data}))
-
-
-#
-# with tf.Session() as sess:
-#     sess.run(init_op)
-#     save_path = "./minist_softmax.ckpt"
-#     saver.restore(sess, save_path)
-#     predictions = sess.run(logits, feed_dict={X: data})
-#     print(predictions[0]);

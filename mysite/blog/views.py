@@ -155,18 +155,18 @@ def data_return(request):
         max_val = test[max2]*100
         starlist = list()
         max_val = int(max_val)
+        print(max2)
+        # print(max_val)
 
-        print(max_val)
-
-        print("---------------------------------------- 100%")
+        # print("---------------------------------------- 100%")
         for i in range(10):
             to = int(test[i]*40)
             temp = ""
             for j in range(to):
                  temp += "*"
             starlist.append(temp)
-            print(starlist[i])
-        print("---------------------------------------- 100%")
+            # print(starlist[i])
+        # print("---------------------------------------- 100%")
 
     # return render(request, 'blog/post_list.html', {})
     return render(request,'blog/test.html',
