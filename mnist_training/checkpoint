@@ -1,2 +1,0 @@
-model_checkpoint_path: "minist_softmax.ckpt"
-all_model_checkpoint_paths: "minist_softmax.ckpt"

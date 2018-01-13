@@ -14,7 +14,7 @@ mnist = input_data.read_data_sets("MNIST_data/", one_hot=True)
 
 # hyper parameters
 learning_rate = 0.001
-training_epochs = 10
+training_epochs = 20
 batch_size = 100
 
 # dropout (keep_prob) rate  0.7~0.5 on training, but should be 1 for testing

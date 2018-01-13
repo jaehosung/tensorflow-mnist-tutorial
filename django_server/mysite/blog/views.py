@@ -12,7 +12,9 @@ from django.shortcuts import render_to_response
 from django.template import RequestContext
 from .models import TestData
 import json
-
+import datetime
+import random
+import time
 
 # Create your views here.
 @csrf_exempt
@@ -35,6 +37,7 @@ def data_return(request):
         im = Image.open("imageToSave.png")
         rgb_im = im.convert('RGB')
         rgb_im.save('colors.jpg')
+        rgb_im.save(str(time.time())+'.jpg')
 
 
         im=Image.open('colors.jpg')
