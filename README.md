@@ -1,7 +1,7 @@
 # tensorflow-mnist-tutorial
 MNIST classification in Tensorflow using Django
 
-<img src="./images/mnist_short.gif" >
+<img src="./images/mnist_short.gif" width = "1000px" >
 
 https://www.youtube.com/watch?v=oaSu3NjladU
 
