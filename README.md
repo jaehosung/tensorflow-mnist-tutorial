@@ -21,7 +21,7 @@ python train.py
 
 ## Run Server
 ```bash
-python train.python manage.py runserver 0.0.0.0:8000
+python manage.py runserver 0.0.0.0:8000
 ```
 
 ## References
