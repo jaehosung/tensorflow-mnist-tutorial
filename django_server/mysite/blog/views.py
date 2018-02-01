@@ -37,8 +37,6 @@ def data_return(request):
         im = Image.open("imageToSave.png")
         rgb_im = im.convert('RGB')
         rgb_im.save('colors.jpg')
-        rgb_im.save(str(time.time())+'.jpg')
-
 
         im=Image.open('colors.jpg')
         img = array(im.resize((28, 28), Image.ANTIALIAS).convert("L"))
