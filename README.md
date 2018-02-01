@@ -1,5 +1,6 @@
 # tensorflow-mnist-tutorial
 MNIST classification in Tensorflow using Django
+https://tensorflow-mnist-tutorial.herokuapp.com/
 
 <img src="./images/mnist_short.gif" width = "1000px" >
 
@@ -23,6 +24,10 @@ python train.py
 ```bash
 python manage.py runserver 0.0.0.0:8000
 ```
+
+### Deploy to Heroku ###
+    $ heroku apps:create [NAME]
+    $ git push heroku master
 
 ## References
  - https://hunkim.github.io/ml/
