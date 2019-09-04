@@ -2,6 +2,7 @@
 MNIST classification in Tensorflow using Django
 
 https://tensorflow-mnist-tutorial.herokuapp.com/
+It might take some time to load this webpage. Please wait :)
 
 <img src="./images/mnist_short.gif" width = "1000px" >
 
